@@ -48,14 +48,4 @@ export class ProductCategoriesService {
 
     return data;
   }
-
-  async remove(id: number) {
-    await this.prisma.productCategories.delete({
-      where: {
-        id: id,
-      },
-    });
-
-    return true;
-  }
 }
